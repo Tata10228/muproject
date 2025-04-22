@@ -1,0 +1,49 @@
+<html>
+<head><title>Вопросы по работе №20</title>
+<style>
+p {
+	font-size:24px;
+}
+input {
+	font-size:24px;
+}
+</style>
+</head>
+<body style="background-color:#ececec">
+<p style=text-align:center>Вопросы по работе №20</p>
+<p>При редактировании объектов в Autoсad обычно выбираются несколько объектов, формирующие
+... объектов <input type="text" id="z_1"></p>
+<p>Для того чтобы убедиться, что две горизонтальные линии пересекают вертикальную,
+можно использовать параметр «...» объектной привязки.
+ <input type="text" id="z_2"></p>
+<p>С помощью ... можно соединить два объекта, используя дугу с заданным
+радиусом, касательную к
+объектам <input type="text" id="z_3"></p>
+<button onClick="proverit();">Проверить</button>
+<br><br>
+<div id="rezultat"></div>
+<script>
+function proverit(){
+pr_otv_zadachi_1 = "набор"; 
+pr_otv_zadachi_2 = "Нормаль" ;
+pr_otv_zadachi_3 = "сопряжения";
+otv_uch_1 = document.getElementById('z_1').value;
+otv_uch_2 = document.getElementById('z_2').value;
+otv_uch_3 = document.getElementById('z_3').value;
+ball = 0;
+if(otv_uch_1 == pr_otv_zadachi_1){
+ball +=1;
+}
+if(otv_uch_2 == pr_otv_zadachi_2){
+ball +=1;
+}
+if(otv_uch_3 == pr_otv_zadachi_3){
+ball +=1;
+}
+vsego_zadach = 3;
+procent_vip = ball/vsego_zadach * 100;
+document.getElementById('rezultat').innerHTML = "Задания выполнены верно на "+procent_vip+"%.";
+}
+</script>
+</body>
+</html>

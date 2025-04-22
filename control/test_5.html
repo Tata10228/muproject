@@ -1,0 +1,47 @@
+<html>
+<head><title>Вопросы по работе №5</title>
+<style>
+p {
+	font-size:24px;
+}
+input {
+	font-size:24px;
+}
+</style>
+</head>
+<body style="background-color:#ececec">
+<p style=text-align:center>Вопросы по работе №5</p>
+<p>Особая область в документе, расположенная сверху или снизу листа, а также в его
+боковой части. Он может содержать в себе абсолютно любую информацию: картинку,
+время и дату создания, количество страниц в документе, имя создателя и многое другое <input type="text" id="z_1"></p>
+<p>Для добавления к тексту комментариев, объяснений, указания источника информации предназначены : <input type="text" id="z_2"></p>
+<p>Для того, чтобы сделать закладку, необходимо установить курсор в нужном месте документа и нажать
+кнопку "Закладка" на панели "..." ленты "Вставка" <input type="text" id="z_3"></p>
+<button onClick="proverit();">Проверить</button>
+<br><br>
+<div id="rezultat"></div>
+<script>
+function proverit(){
+pr_otv_zadachi_1 = "колонтитул"; 
+pr_otv_zadachi_2 = "сноски" ;
+pr_otv_zadachi_3 = "связи";
+otv_uch_1 = document.getElementById('z_1').value;
+otv_uch_2 = document.getElementById('z_2').value;
+otv_uch_3 = document.getElementById('z_3').value;
+ball = 0;
+if(otv_uch_1 == pr_otv_zadachi_1){
+ball +=1;
+}
+if(otv_uch_2 == pr_otv_zadachi_2){
+ball +=1;
+}
+if(otv_uch_3 == pr_otv_zadachi_3){
+ball +=1;
+}
+vsego_zadach = 3;
+procent_vip = ball/vsego_zadach * 100;
+document.getElementById('rezultat').innerHTML = "Задания выполнены верно на "+procent_vip+"%.";
+}
+</script>
+</body>
+</html>
